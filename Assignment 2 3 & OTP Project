@@ -1,0 +1,50 @@
+#Modules
+#OTP project 
+
+import random as r
+import string
+
+length= 6
+otp = '' 
+
+characters = string.ascii_letters + string.digits
+print(characters)
+
+for i in range(length):
+     otp = otp + r.choice(characters)
+
+print("OTP:",otp)
+
+
+
+
+
+
+
+#Assignment 2  Remove All Occurances of an element from a list
+myList = [2, 1, 3, 5, 1, 1, 1, 0]
+myList = list(filter((1).__ne__, myList))
+print(myList)
+
+
+
+
+
+
+#Assignment 3 Check Whether Given string is pangram
+#A pangram is a sentence containing every letter in the English Alphabet
+
+import string
+
+  
+alphabet = set(string.ascii_lowercase)
+  
+def ispangram(str):
+     return not set(alphabet) - set(str)
+      
+
+string = 'Suyash is very talented man'
+if(ispangram(string) == True):
+    print("Yes")
+else:
+    print("No")
